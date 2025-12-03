@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            text-align: center;
+            background-color: #f8f4f4; /* Dark Background */
+            color: rgb(249, 252, 250);
+            padding-top: 32px;
+        }
+
+        /* TITLE */
+        .title {
+            display: inline-block;
+            background-color: #2b103b; /* Orange */
+            padding: 30px; /* Creates the thickness of the Orange layer */
+            color: rgb(255, 255, 255);
+        }
+
+        /* 1. MARGIN (Orange Box) */
+        .margin {
+            display: inline-block;
+            background-color: #ff7043; /* Orange */
+            padding: 30px; /* Creates the thickness of the Orange layer */
+            color: white;
+        }
+
+        /* 2. BORDER (Blue Box) */
+        .border {
+            display: inline-block;
+            background-color: #00bcd4; /* Cyan/Blue */
+            padding: 35px; /* Creates the thickness of the Blue layer */
+            color: white;
+        }
+
+        /* 3. PADDING (Yellow Box) */
+        .padding {
+            display: inline-block;
+            background-color: #ffca28; /* Yellow */
+            padding: 30px; /* Creates the thickness of the Yellow layer */
+            color: white;
+        }
+
+        /* 4. CONTENT (Green Box) */
+        .content {
+            display: inline-block;
+            background-color: #00bfa5; /* Green */
+            width: 122px;  /* Size of the actual content area */
+            height: 150px;
+            line-height: 150px; /* Vertically centers the text "CONTENT" */
+            color: white;
+        }
+
+        /* Helper to push the inner boxes down so text shows at top */
+        .label-gap {
+            display: block;
+            margin-bottom: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    
+
+
+    <div class="title">
+<span class="label-gap">CSS Box Model</span>
+    <div class="margin">
+        <span class="label-gap">MARGIN</span>
+        
+        <div class="border">
+            <span class="label-gap">BORDER</span>
+            
+            <div class="padding">
+                <span class="label-gap">PADDING</span>
+                
+                <div class="content">
+                    CONTENT
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
